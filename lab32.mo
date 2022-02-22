@@ -1,8 +1,8 @@
 model battle
-  parameter Real a = 0.45;
-  parameter Real b = 0.55;
+  parameter Real a = 0.38;
+  parameter Real b = 0.67;
   parameter Real c = 0.58;
-  parameter Real h = 0.45;
+  parameter Real h = 0.39;
   
   parameter Real x0 = 88000;
   parameter Real y0 = 99000;
@@ -11,7 +11,7 @@ model battle
   Real y(start=y0);
  
 equation
-  der(x) = - a*x - b*y + sin(time + 15);
-  der(x) = - c*x - h*y + cos(time + 3);
+  der(x) = - a*x - b*y + sin(7*time) + 1;
+  der(x) = - c*x - h*y + cos(8*time) + 1;
   
 end battle;
